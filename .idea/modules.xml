@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PigManage.iml" filepath="$PROJECT_DIR$/PigManage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PigManage-my.iml" filepath="$PROJECT_DIR$/PigManage-my.iml" />
     </modules>
   </component>
 </project>
