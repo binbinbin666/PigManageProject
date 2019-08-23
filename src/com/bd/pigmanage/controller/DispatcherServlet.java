@@ -1,7 +1,6 @@
 package com.bd.pigmanage.controller;
 
 import com.bd.pigmanage.service.BaseService;
-import org.apache.commons.lang3.StringUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,6 +22,14 @@ public class DispatcherServlet extends HttpServlet {
         resp.setContentType("text/html;charset=utf-8");
         //获取URI
         String requestURI = req.getRequestURI();
+        String[] split = requestURI.split("/");
+        //获取返回值地址
+        String address = split[1];
+        //截取出参数地址
+        String uri = "/" + split[2] + "/" + split[3];
+        String substring = requestURI.substring(requestURI.indexOf("/"));
+        System.out.println(substring);
+
         //获取请求参数
         Map<String, String[]> parameterMap = req.getParameterMap();
 
@@ -40,13 +47,11 @@ public class DispatcherServlet extends HttpServlet {
             System.out.println(mapKey+":"+mapValue[0]);
         }
         //传递给BaseService
-        new BaseService(requestURI,reqMap);
+        new BaseService(uri,reqMap);
 
         List<Object> result = reqMap.get("result");
         System.out.println(result.get(0));
 
-        List<Object> url = reqMap.get("url");
-        System.out.println(url.get(0));
-        resp.sendRedirect("/"+url.get(0).toString());
+        resp.sendRedirect("/"+address+".jsp");
     }
 }

@@ -15,7 +15,8 @@
 </head>
 
 <body data-type="generalComponents">
-index.jsp
+index.jsp<br>
+<a href="addIllnessSet.jsp">添加猪只疾病参数设定</a>
 </body>
 
 </html>

@@ -25,10 +25,10 @@ public class PigService {
     }
 
     private void insertIllnessSet(Map<String, List<Object>> reqMap){
+            System.out.println("service:");
         for (Map.Entry<String, List<Object>> entry:reqMap.entrySet()) {
             String mapKey = entry.getKey();
             List<Object> value = entry.getValue();
-            System.out.println("service:");
             for(Object v:value) {
                 System.out.println(mapKey+":"+v.toString());
             }
@@ -38,9 +38,5 @@ public class PigService {
         list.add("成功");
         reqMap.clear();
         reqMap.put("result",list);
-        //返回url
-        List<Object> url = new ArrayList<>();
-        url.add("addIllnessSet.jsp");
-        reqMap.put("url",url);
     }
 }
