@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Test",
+            "request": "launch",
+            "mainClass": "com.bd.pigmanage.test.Test",
+            "projectName": "PigManageProject_5848879f"
+        }
+    ]
+}
